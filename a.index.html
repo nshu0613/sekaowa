@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrick - 画像3枚</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column; /* 縦配置 */
+            align-items: center; /* 中央揃え */
+            gap: 20px; /* 画像間の余白 */
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* 横並びの間隔 */
+        }
+        .image-container img {
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .image-container img:hover {
+            opacity: 0.8;
+        }
+    </style>
+    <script>
+        function changeImage() {
+            document.getElementById('image1').src = 'https://i.imgur.com/N0h8j6I.jpeg';  // 新しい画像に変更
+        }
+    </script>
+</head>
+<body>
+    <h1>Tap for more</h1>
+    <div class="image-container">
+        <!-- 画像1（クリックで変更） -->
+        <img id="image1" src="https://i.imgur.com/iQXnk6Z.jpeg" 
+             alt="画像1" 
+             style="width: 300px; height: 400px;" 
+             onclick="changeImage();">
+        
+        <!-- 画像2と画像3を横並び -->
+        <div class="row">
+            <img src="https://i.imgur.com/AfukL4b.jpeg" 
+                 alt="画像2" 
+                 style="width: 180px; height: auto;" 
+                 onclick="window.location.href='https://music.apple.com/jp/album/%E3%82%A2%E3%83%AB%E3%82%A8/1464634419?i=1464634422';">
+            
+            <img src="https://i.imgur.com/RHfIuOd.jpeg" 
+                 alt="画像3" 
+                 style="width: 180px; height: auto;" 
+                 onclick="window.location.href='https://sekainoowari.jp';">
+        </div>
+    </div>
+</body>
+</html>
